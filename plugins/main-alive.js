@@ -31,7 +31,7 @@ cmd({
 
  \`Status\`: *Subzero is online! 🤗🚀*
 
-> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐌𝐑 𝐅𝐑𝐀𝐍𝐊
+> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐌𝐑 𝐅𝐑𝐀𝐍𝐊. 🔗
 `.trim();
 
     if (!ALIVE_IMG || !ALIVE_IMG.startsWith("http")) {
@@ -52,6 +52,15 @@ cmd({
         }
       }
     }, { quoted: mek });
+
+// Send audio as per your request
+        await conn.sendMessage(from, {
+            audio: { url: 'https://github.com/mrfrank-ofc/SUBZERO-MD-DATABASE/raw/refs/heads/main/audios/subzero-theone.mp3' }, // Audio URL
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: mek });
+
+    
   } catch (error) {
     console.error("Error in alive command: ", error);
     const errorMessage = `
